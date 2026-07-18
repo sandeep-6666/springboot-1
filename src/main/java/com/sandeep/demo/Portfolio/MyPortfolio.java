@@ -101,9 +101,9 @@ public class MyPortfolio {
                     <a href="https://github.com/sandeep-6666">
                     https://github.com/sandeep-6666
                     </a>
-                </li> 
+                </li>
             </ul>
             """;
     }
-    }
+}
 
