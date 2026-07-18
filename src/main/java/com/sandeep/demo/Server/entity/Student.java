@@ -2,25 +2,28 @@ package com.sandeep.demo.Server.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 @Entity
 public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer id;
-    int age;
-    String name;
-    String depertment;
+    private Integer id;
 
-    public int getid() {
+    private int age;
+    private String name;
+    private String department;
+
+    public Integer getId() {
         return id;
     }
 
-    public void setid(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
+
     public int getAge() {
         return age;
     }
@@ -37,13 +40,11 @@ public class Student {
         this.name = name;
     }
 
-    public String getDepertment() {
-        return depertment;
+    public String getDepartment() {
+        return department;
     }
 
-    public void setDepertment(String depertment) {
-        this.depertment = depertment;
+    public void setDepartment(String department) {
+        this.department = department;
     }
-
-
 }

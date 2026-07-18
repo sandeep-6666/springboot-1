@@ -21,7 +21,7 @@ public class StudentController {
     // create the student
     @PostMapping("/addstudent")
     public ResponseEntity<?> storeStudent(@RequestBody Student student) {
-        Student result = studentService.StudentValidate(student);
+        Student result = studentService.studentValidate(student);
 
         if (result == null) {
             return ResponseEntity.status(400).body("Invalid data");
