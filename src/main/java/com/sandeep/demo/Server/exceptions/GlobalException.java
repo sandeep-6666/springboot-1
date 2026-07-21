@@ -1,12 +1,8 @@
 package com.sandeep.demo.Server.exceptions;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @Restcontroller advice for handling execption in controller--
@@ -14,7 +10,7 @@ import java.util.Map;
  */
 
 @RestControllerAdvice
-public class GlobalExecption {
+public class GlobalException {
 
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<String> handleRuntimeException(RuntimeException e) {

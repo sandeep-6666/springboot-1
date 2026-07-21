@@ -28,9 +28,9 @@ public class StudentService {
         Student student = mapToStudent(createStudentRequestDTO);
 
 
-        if (studentRepository.existsByEmail(student.getEmail())) {
-            throw new IllegalArgumentException("Email is already taken");
-        }
+//        if (studentRepository.existsByEmail(student.getEmail())) {
+//            throw new IllegalArgumentException("Email is already taken");
+//        }
 
         studentRepository.save(student);
         return mapToResponseDTO(student);
@@ -105,7 +105,7 @@ public class StudentService {
         student.setName(createStudentRequestDTO.getName());
         student.setAge(createStudentRequestDTO.getAge());
         student.setDepartment(createStudentRequestDTO.getDepartment());
-        student.setEmail(createStudentRequestDTO.getEmail());
+        //student.getEmail(createStudentRequestDTO.getEmail());
         student.setCreatedAt(LocalDateTime.now());
         student.setUpdatedAt(LocalDateTime.now());
 
@@ -117,7 +117,7 @@ public class StudentService {
         createStudentResponseDTO.setId(student.getId());
         createStudentResponseDTO.setName(student.getName());
         createStudentResponseDTO.setAge(student.getAge());
-        createStudentResponseDTO.setEmail(student.getEmail());
+        //createStudentResponseDTO.setEmail(student.getEmail());
         createStudentResponseDTO.setDepartment(student.getDepartment());
         createStudentResponseDTO.setDepartment(student.getDepartment());
 
